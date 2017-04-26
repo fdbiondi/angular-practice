@@ -1,0 +1,20 @@
+{
+  "name": "angular-quickstart",
+  "description": "QuickStart package.json from the documentation, supplemented with testing support",
+  "main": "",
+  "authors": [
+    "uno-de-piera <unodepiera@uno-de-piera.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/angular/quickstart",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "materialize": "^0.97.7"
+  }
+}

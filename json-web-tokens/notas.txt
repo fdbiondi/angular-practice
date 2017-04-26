@@ -1,0 +1,62 @@
+Crear proyecto base clonando el quickstart
+    git clone https://github.com/angular/quickstart.git angular2
+    cd angular2
+    npm install
+
+
+Instalar y configurar JWT
+    npm install angular2-jwt --save
+    npm install
+
+
+Registrar JWT en systemjs.config.js
+    'angular2-jwt': 'npm:angular2-jwt/angular2-jwt.js',
+
+
+Modificar directorios, ahora los componentes van dentro del directorio components
+
+
+Modificar module para registra componente app y jwt + httpmodule
+    import { AUTH_PROVIDERS } from 'angular2-jwt';
+    import { HttpModule } from '@angular/http';
+
+    providers: [ AUTH_PROVIDERS ]
+    imports: [ BrowserModule, HttpModule ]
+
+
+Definir componentes de la aplicación
+    app/components/
+                    login/
+                        login.component.ts
+                    signup/
+                        signup.component.ts
+                    profile/
+                        profile.component.ts
+                    user/
+                        form/user_form.component.ts
+                        list/user_list.compoent.ts
+                        add/user_add.component.ts
+                        edit/user_edit.component.ts
+
+
+Crear archivo app/components/index.ts para importar y exportar todos los componentes de la app
+
+
+Crear app/providers/auth.service.ts para controlar el acceso a la aplicación, login y registro de usuarios
+
+
+Crear app/guard/auth_guard.service.ts para controlar el acceso a las zonas de la aplicación
+
+
+Crear app/routes/app.routing.ts para definir todas las rutas de la aplicación
+
+
+Instalar dependencias bower
+    bower init
+    bower install materialize --save
+
+
+Definir tag base en index.html y zona custom
+
+
+Modificar app/components/app/app.component.ts para añadir router-outlet
